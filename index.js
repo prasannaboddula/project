@@ -1,5 +1,4 @@
-import express from "express";
-
+const express = require("express");
 const app = express();
 const port = 9000
 
@@ -22,8 +21,8 @@ app.get("/jokes", (req,res) => {
     res.send(jokes[i]);
 });
 
-app.use("/", (req,res) => {
-    res.json({message: "welcome to the random jokes"});
+app.get("/", (req,res) => {
+    res.send({message: "welcome to the random jokes"});
 });
 
 app.listen(9000, () => {
