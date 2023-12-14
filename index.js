@@ -18,7 +18,7 @@ let jokes = [
 ]
 
 app.get("/jokes", (req,res) => {
-    const i = Math.floor(Math.random()*11);
+    const i = Math.floor(Math.random()*9);
     res.send(jokes[i]);
 });
 
