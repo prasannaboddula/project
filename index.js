@@ -20,7 +20,7 @@ let jokes = [
 
 app.get("/jokes", (req,res) => {
     const i = Math.floor(Math.random()*11);
-    res.json({jokes:jokes[i]});
+    res.send({jokes:jokes[i]});
 });
 
 app.listen(9000, () => {
