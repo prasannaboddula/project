@@ -16,12 +16,8 @@ let jokes = [
     ["Jack and Jill 'really' go up the hill to get better Wi-fi."],
 ]
 
-app.get("/jokes", (req,res) => {
-    res.send(jokes);
-});
-
-app.get("/", (req,res) => {
-    res.send(jokes);
+app.use("/", (req,res) => {
+    res.json({jokes});
 });
 
 app.listen(9000, () => {
