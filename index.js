@@ -17,9 +17,9 @@ let jokes = [
     ["Jack and Jill 'really' go up the hill to get better Wi-fi."],
 ]
 
-app.use("/jokes", (req,res) => {
+app.get("/jokes", (req,res) => {
     const i = Math.floor(Math.random()*11);
-    res.json(jokes[i]);
+    res.send(jokes[i]);
 });
 
 app.use("/", (req,res) => {
