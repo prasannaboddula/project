@@ -21,7 +21,7 @@ app.get("/jokes", (req,res) => {
 });
 
 app.get("/", (req,res) => {
-    res.send({message: "welcome to the random jokes"});
+    res.send(jokes);
 });
 
 app.listen(9000, () => {
