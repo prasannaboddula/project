@@ -18,7 +18,7 @@ let jokes = [
 ]
 
 
-app.use("/jokes", (req,res) => {
+app.get("/jokes", (req,res) => {
     const i = Math.floor(Math.random()*11);
     res.json({jokes:jokes[i]});
 });
