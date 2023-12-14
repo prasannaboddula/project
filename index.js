@@ -1,4 +1,4 @@
-import express from"express";
+const express = require("express");
 
 const app = express();
 const port = 9000
@@ -21,6 +21,10 @@ let jokes = [
 app.get("/jokes", (req,res) => {
     const i = Math.floor(Math.random()*11);
     res.send(jokes[i]);
+});
+
+app.get("/", (req,res) => {
+    res.send("Welcome!");
 });
 
 app.listen(9000, () => {
