@@ -23,7 +23,7 @@ app.use("/jokes", (req,res) => {
 });
 
 app.use("/", (req,res) => {
-    res.json("welcome to the random jokes");
+    res.json({message: "welcome to the random jokes"});
 });
 
 app.listen(9000, () => {
